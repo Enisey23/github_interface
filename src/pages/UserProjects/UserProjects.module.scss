@@ -1,0 +1,35 @@
+.parent {
+  @apply p-4;
+
+  .avatar {
+    @apply align-middle w-24 h-24 mb-2;
+    border-radius: 50%;
+  }
+
+  h1 {
+    @apply pl-3
+  }
+  .table {
+    @apply overflow-auto rounded-lg shadow mt-4;
+
+    thead {
+      @apply bg-gray-50 border-b-2 border-gray-200;
+
+      tr:nth-child(odd) {
+        @apply bg-gray-200;
+      }
+
+      th {
+        @apply p-3 text-sm font-semibold tracking-wide;
+      }
+
+      td {
+        @apply p-3 text-sm text-gray-700 text-center;
+
+        button {
+          @apply font-bold text-blue-500 hover:underline;
+        }
+      }
+    }
+  }
+}

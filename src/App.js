@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import SearchUser from "./pages/SearchUser/SearchUser";
+import UserCommits from "./pages/UserCommits/UserCommits";
+import UserProjects from './pages/UserProjects/UserProjects'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<SearchUser />} />
+      <Route path="/user" element={<UserProjects />} />
+      <Route path="/user/commit" element={<UserCommits />} />
+    </Routes>
   );
 }
 
